@@ -1,6 +1,6 @@
 /*Lab 2 tester
 To compile:
-g++ lab2.cpp lab2tester.cpp timer.cpp -std=c++11
+g++ lab2.cpp lab2tester.cpp timer.cpp -std=c++0x
 */
 #include <iostream>
 #include <cstdlib>
