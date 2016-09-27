@@ -20,15 +20,15 @@ int main(void){
 	list.push_back(1);
 	list.print();   //1
 	cout << "*****5******" << endl;
-    list.push_back(2);
-    list.push_back(3);
+	list.push_back(2);
+	list.push_back(3);
 	list.print();   //1 2 3 
 	cout << "*****6******" << endl;
-    list.pop_front();
+	list.pop_front();
 	list.print();   //2 3 
 	cout << "*****7******" << endl;
-    list.pop_front();
-    list.pop_front();
+	list.pop_front();
+	list.pop_front();
 	list.print();   //prints nothing, list is empty 
 	cout << "*****8******" << endl;
 	list.push_back(20);
@@ -54,15 +54,15 @@ int main(void){
 	list2.push_back(1);
 	list2.print();   //1
 	cout << "*****E******" << endl;
-    list2.push_back(2);
-    list2.push_back(3);
+	list2.push_back(2);
+	list2.push_back(3);
 	list2.print();   //1 2 3 
 	cout << "*****F******" << endl;
-    list2.pop_front();
+	list2.pop_front();
 	list2.print();   //2 3 
 	cout << "*****G******" << endl;
-    list2.pop_front();
-    list2.pop_front();
+	list2.pop_front();
+	list2.pop_front();
 	list2.print();   //prints nothing, list2 is empty 
 	cout << "*****H******" << endl;
 	list2.push_back(20);
