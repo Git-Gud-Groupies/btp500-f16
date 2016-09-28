@@ -4,7 +4,7 @@ int main(void){
 	DList<int> list;
 	SList<int> list2;
 	list.push_front(10);
-	list.print();    //15
+	list.print();    //10
 	cout << "*****1******" << endl;
 	list.push_front(5);
 	list.push_front(15);
@@ -38,7 +38,7 @@ int main(void){
 	list.print();  //prints: 23 21 20 22 
 
 	list2.push_front(10);
-	list2.print();    //15
+	list2.print();    //10
 	cout << "*****A******" << endl;
 	list2.push_front(5);
 	list2.push_front(15);
