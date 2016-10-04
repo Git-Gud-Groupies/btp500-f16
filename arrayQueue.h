@@ -10,10 +10,10 @@ class Queue{
 		tmp=new T[max_*2];
 		int j=front_;
 		for(int i=0;i<size_;i++,j=(j+1)%max_){
-			tmp[i]=theStack_[j];
+			tmp[i]=theQueue_[j];
 		}
-		delete theStack_;
-		theStack_=tmp;
+		delete theQueue_;
+		theQueue_=tmp;
 		front_=0;
 		back_=size_;
 		max_*=2;
