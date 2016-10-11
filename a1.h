@@ -40,7 +40,7 @@ public:
 	iterator search(const T& data);
 	const_iterator search(const T& data) const;
 	void qSort();   //part 3
-	void qSortIterative();  //part 3
+	void sortIterative();  //part 3
 	bool empty() const;
 	int size() const;
 	~DList();
