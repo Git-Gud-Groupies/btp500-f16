@@ -32,12 +32,13 @@ public:
 	const_iterator end() const;
 	void push_front(const T& data);
 	void push_back(const T& data);
-	void pop_front(const T& data);
-	void pop_back(const T& data);	
+	void pop_front();
+	void pop_back();	
 	iterator insert(iterator loc, const T& data);
 	void erase(iterator it);
 	void erase(iterator first, iterator last);
-	iterator search(const T& data) const;
+	iterator search(const T& data);
+	const_iterator search(const T& data) const;
 	void qSort();   //part 3
 	void qSortIterative();  //part 3
 	bool empty() const;
