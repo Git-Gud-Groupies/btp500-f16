@@ -68,13 +68,13 @@ int main(int argc, char* argv[]){
 	t2.start();
 	recursiveList.qSort();
 	t2.stop();
-	cout << "recursive LL sort( " << cap <<   " ) values: "  << t1.currtime() << "s" << endl;
+	cout << "recursive LL sort( " << cap <<   " ) values: "  << t2.currtime() << "s" << endl;
 
 	Timer t3;
 	t3.start();
 	iterativeList.sortIterative();
 	t3.stop();
-	cout << "iterative LL sort( " << cap <<   " ) values: "  << t1.currtime() << "s" << endl;
+	cout << "iterative LL sort( " << cap <<   " ) values: "  << t3.currtime() << "s" << endl;
 	cout << endl;
 	cout << endl;
 	cout << "verifying sort function correctness" << endl;
@@ -87,14 +87,13 @@ int main(int argc, char* argv[]){
 	}
 	if(passtest){
 		numPassed++;
-		if(!checkList(iterativeList,data,cap)){
-			passtest=false;
-			cout << "bug in iterative sort() function" << endl;
-			#if VERBOSE == 1
-			printLists(iterativeList,data,cap);
-			#endif
-		}
-
+	}
+	if(!checkList(iterativeList,data,cap)){
+		passtest=false;
+		cout << "bug in iterative sort() function" << endl;
+		#if VERBOSE == 1
+		printLists(iterativeList,data,cap);
+		#endif
 	}
 	if(passtest){
 		numPassed++;
