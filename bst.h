@@ -52,8 +52,17 @@ class BST{
 	/*detaches and returns the smallest node from tree at 
 	root subtreeroot
 	*/
-	Node* detachSmallest(Node*& subtreeroot){
+	Node* detachSmallest(Node*& r){
+		Node* rc;
+		if(r->left_==nullptr){
+			rc=r;
+			r=r->right_;	
+		}
+		else{
+			rc=detachSmallest(r->left_);
+		}
 
+		return rc;
 	}
 	/*removes the node containing data from the subtree 
 	with root subtreeroot*/
@@ -65,14 +74,15 @@ class BST{
 				Node* rm=subtreeroot;
 				if(subtreeroot->right_ && subtreeroot->left_){
 					//2 children
-					Node* IS = detachSmallest(subtreeroot->right_);
-
+					Node* inorderSuccessor=detachSmallest(subtreeroot->right_);
+					inorderSuccessor->left_=subtreeroot->left_;
+					inorderSuccessor->right_=subtreeroot->right_;
+					subtreeroot=inorderSuccessor;
 				}
 				else{
 					if(subtreeroot->left_){
 						//only left child
 						subtreeroot=subtreeroot->left_;
-
 					}
 					else if(subtreeroot->right_){
 						//only right child
