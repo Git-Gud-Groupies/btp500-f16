@@ -25,7 +25,7 @@ class AVL{
 		if(n){
 			int heightLeft=height(n->left_);
 			int heightRight=height(n->right_));
-			rc=(heightLeft > heightRight)?heightLeft:heightRight;
+			rc=1+ (heightLeft > heightRight)?heightLeft:heightRight;
 			//wrong way to use ?:
 			// (a > b)? (cout << a) : (cout << b);
 			//right way to use ?:
